@@ -1,0 +1,29 @@
+{
+  "name": "002_natours",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass sass/main.scss style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' style.comp.css -o style.css",
+    "build:css": "npm-run-all compile:sass prefix:css"
+  },
+  "browserslist": [
+    "last 10 versions",
+    "> 5%",
+    "IE 9"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dimastarkov/002_natours.git"
+  },
+  "author": "Dima Starkov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dimastarkov/002_natours/issues"
+  },
+  "homepage": "https://github.com/dimastarkov/002_natours"
+}
